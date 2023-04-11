@@ -1,13 +1,25 @@
 class NumbersController < ApplicationController
   def winners
-    @zebra = Array.new
+    @lucky_numbers = Array.new
 
     5.times do
-      giraffe = rand(1...100)
+      new_number = rand(1...100)
       
-      @zebra.push(giraffe)
+      @lucky_numbers.push(new_number)
     end
 
-    render({ :template => "lottery_stuff/woohoo.html.erb"})
+    render({ :template => "lottery_stuff/lucky_numbers.html.erb" })
   end 
+
+  def losers
+    @unlucky_numbers = Array.new
+
+    5.times do
+      new_number = rand(1...100)
+
+      @unlucky_numbers.push(new_number)
+    end
+
+    render({ :template => "lottery_stuff/unlucky_numbers.html.erb" })
+  end
 end
