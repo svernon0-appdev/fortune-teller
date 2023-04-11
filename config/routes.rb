@@ -28,7 +28,8 @@ Rails.application.routes.draw do
   # Earth Controller
   get("/zodiacs/taurus", { :controller => "earth", :action => "bull" })
 
-  # get("/zodiacs/virgo", { :controller => "earth", :action => "maiden" })
+  get("/zodiacs/virgo", { :controller => "earth", :action => "maiden" })
+
   # get("/zodiacs/capricorn", { :controller => "earth", :action => "goat" })
   
   # get("/zodiacs/gemini", { :controller => "air", :action => "twins" })
