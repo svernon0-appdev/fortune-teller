@@ -34,8 +34,9 @@ Rails.application.routes.draw do
   
   # Air Controller
   get("/zodiacs/gemini", { :controller => "air", :action => "twins" })
+
+  get("/zodiacs/libra", { :controller => "air", :action => "scales" })
   
-  # get(" /zodiacs/libra", { :controller => "air", :action => "scales" })
   # get ("/zodiacs/aquarius", { :controller => "air", :action => "waterbearer" })
   
   # get("/zodiacs/cancer " { :controller => "earth" :action => "crab" })
