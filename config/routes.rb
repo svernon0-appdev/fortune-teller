@@ -19,32 +19,32 @@ Rails.application.routes.draw do
   # Do NOT uncomment more than one at a time, or you'll be dealing with multiple syntax errors at once.
 
   # Fire Controller
-  get("/zodiacs/aries", { :controller =>  "fire", :action =>  "ram" })
+    get("/zodiacs/aries", { :controller =>  "fire", :action =>  "ram" })
 
-  get("/zodiacs/leo", { :controller => "fire", :action => "lion" })
+    get("/zodiacs/leo", { :controller => "fire", :action => "lion" })
 
-  get("/zodiacs/sagittarius", { :controller => "fire", :action => "archer" })
+    get("/zodiacs/sagittarius", { :controller => "fire", :action => "archer" })
   
   # Earth Controller
-  get("/zodiacs/taurus", { :controller => "earth", :action => "bull" })
+    get("/zodiacs/taurus", { :controller => "earth", :action => "bull" })
 
-  get("/zodiacs/virgo", { :controller => "earth", :action => "maiden" })
+    get("/zodiacs/virgo", { :controller => "earth", :action => "maiden" })
 
-  get("/zodiacs/capricorn", { :controller => "earth", :action => "goat" })
+    get("/zodiacs/capricorn", { :controller => "earth", :action => "goat" })
   
   # Air Controller
-  get("/zodiacs/gemini", { :controller => "air", :action => "twins" })
+    get("/zodiacs/gemini", { :controller => "air", :action => "twins" })
 
-  get("/zodiacs/libra", { :controller => "air", :action => "scales" })
-  
-  get("/zodiacs/aquarius", { :controller => "air", :action => "waterbearer" })
+    get("/zodiacs/libra", { :controller => "air", :action => "scales" })
+    
+    get("/zodiacs/aquarius", { :controller => "air", :action => "waterbearer" })
   
   # Water Controller
-  get("/zodiacs/cancer", { :controller => "water", :action => "crab" })
+    get("/zodiacs/cancer", { :controller => "water", :action => "crab" })
 
-  get("/zodiacs/scorpio", { :controller => "water", :action => "scorpion" })
+    get("/zodiacs/scorpio", { :controller => "water", :action => "scorpion" })
 
-  get("/zodiacs/pisces", { :controller => "water", :action => "fish" })
+    get("/zodiacs/pisces", { :controller => "water", :action => "fish" })
 
   # PART 3: MORE R→C→A→V PRACTICE
   # ==========================
@@ -60,9 +60,15 @@ Rails.application.routes.draw do
   #  - Add some static HTML to mock up the response that you want to send back.
   #  - Write the Ruby to make it dynamic, and work properly.
 
-  # /roll/1/6
-  # /roll/2/6
-  # /roll/3/6
+  # Dice Rolls
+
+    # 6 Sided-Die Rolls
+      get("/roll/1/6", { :controller => "dice", :action => "d6_1" })
+
+      get("/roll/2/6", { :controller => "dice", :action => "d6_2" })
+
+      get("/roll/3/6", { :controller => "dice", :action => "d6_3" })
+    
   # /roll/4/6
   # /roll/5/6
   # /roll/6/6
